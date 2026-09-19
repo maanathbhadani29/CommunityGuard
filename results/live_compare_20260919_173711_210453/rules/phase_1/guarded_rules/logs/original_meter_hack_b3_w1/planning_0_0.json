@@ -1,0 +1,12 @@
+{
+  "source": "deterministic_rules",
+  "stage": "planning",
+  "parsed": {
+    "operation": "ENERGY_BALANCE",
+    "justification": "Largest positive interval-dominance utility using the same reports given to Llama."
+  },
+  "error": null,
+  "latency_seconds": 0.0,
+  "input_tokens": 0,
+  "output_tokens": 0
+}

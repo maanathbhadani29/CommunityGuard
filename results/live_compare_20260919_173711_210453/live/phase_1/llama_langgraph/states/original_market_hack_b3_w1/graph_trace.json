@@ -1,0 +1,65 @@
+{
+  "case_id": "original_market_hack_b3_w1",
+  "trace": [
+    {
+      "node": "detection",
+      "alarm": true
+    },
+    {
+      "node": "forensic_agent",
+      "source": "llama_live",
+      "decision": {
+        "building": 3,
+        "channel": "electricity_pricing",
+        "assessment": "corruption_suspected",
+        "tool_request": "NONE",
+        "justification": "Strongest inconsistency in building 3, channel electricity_pricing with score 9.086 and inconsistent_fraction 1.0."
+      },
+      "error": null
+    },
+    {
+      "node": "defense_agent",
+      "source": "llama_live",
+      "proposal": {
+        "operation": "CONDITIONAL_MODEL",
+        "justification": "Largest conditional improvement with 0.098043 absolute improvement."
+      },
+      "error": ""
+    },
+    {
+      "node": "verification",
+      "accepted": true,
+      "changed_hours": 168,
+      "eligible_hours": 168,
+      "mean_guaranteed_absolute_improvement_conditional": 0.0980429532148985,
+      "reason": "conditional_interval_dominance",
+      "scope": "One building/channel only; guarantee requires true channel within the reference interval."
+    },
+    {
+      "node": "commit"
+    }
+  ],
+  "terminal": "committed",
+  "diagnosis": {
+    "building": 3,
+    "channel": "electricity_pricing",
+    "assessment": "corruption_suspected",
+    "tool_request": "NONE",
+    "justification": "Strongest inconsistency in building 3, channel electricity_pricing with score 9.086 and inconsistent_fraction 1.0."
+  },
+  "proposal": {
+    "operation": "CONDITIONAL_MODEL",
+    "justification": "Largest conditional improvement with 0.098043 absolute improvement."
+  },
+  "verification": {
+    "accepted": true,
+    "changed_hours": 168,
+    "eligible_hours": 168,
+    "mean_guaranteed_absolute_improvement_conditional": 0.0980429532148985,
+    "reason": "conditional_interval_dominance",
+    "scope": "One building/channel only; guarantee requires true channel within the reference interval."
+  },
+  "attempts": 1,
+  "inspections": 0,
+  "error": ""
+}

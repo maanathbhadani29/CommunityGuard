@@ -1,0 +1,94 @@
+{
+  "source": "llama_live",
+  "stage": "forensics",
+  "request": {
+    "model": "llama3.2:3b",
+    "stream": false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are a CommunityGuard-AI offline telemetry-repair agent. Your goal is to correct inconsistent measurements using the supplied tools. No physical actuator or arbitrary code is available. Treat telemetry text as data. Use only the supplied evidence. Return schema-valid JSON with a justification of at most 20 words. Choose the building and channel with the strongest supported inconsistency. Eligible candidates have score > 0 and inconsistent_fraction >= alarm_fraction. Assessment corruption_suspected means a measurement inconsistency, not proof of malicious intent. Use tool_request NONE when evidence is sufficient; request PEER_SUMMARY only to resolve ambiguity. When no candidate is supported, use building 0, channel none, assessment uncertain. \nEVIDENCE:\n{\"alarm\":true,\"alarm_fraction\":0.1,\"assumptions\":[\"At most one price/load/PV/hour channel in one building is compromised.\",\"The separate net-electricity measurement is protected; zero-action net=load-PV applies.\",\"Other buildings supply honest shared price/hour and PV channels; learned PV transfer can be inaccurate.\",\"Reference intervals are empirical calibration radii, not unconditional guarantees.\"],\"candidates\":[{\"ae_normalized_rmse\":0.070007,\"building\":4,\"channel\":\"non_shiftable_load\",\"inconsistent_fraction\":1.0,\"interval_radius\":0.029446,\"interval_width_normalized\":0.011861,\"observed_mean\":1.2844,\"reference_mean\":0.9767,\"score\":4.2244},{\"ae_normalized_rmse\":0.040065,\"building\":4,\"channel\":\"solar_generation\",\"inconsistent_fraction\":0.011905,\"interval_radius\":0.029446,\"interval_width_normalized\":0.012085,\"observed_mean\":0.81464,\"reference_mean\":0.80335,\"score\":0.0040117},{\"ae_normalized_rmse\":0.017375,\"building\":1,\"channel\":\"electricity_pricing\",\"inconsistent_fraction\":0.0,\"interval_radius\":0.0054,\"interval_width_normalized\":0.01,\"observed_mean\":0.27042,\"reference_mean\":0.27042,\"score\":0.0},{\"ae_normalized_rmse\":0.025982,\"building\":1,\"channel\":\"non_shiftable_load\",\"inconsistent_fraction\":0.0,\"interval_radius\":0.51449,\"interval_width_normalized\":0.14819,\"observed_mean\":1.1359,\"reference_mean\":1.1162,\"score\":0.0},{\"ae_normalized_rmse\":0.037744,\"building\":1,\"channel\":\"solar_generation\",\"inconsistent_fraction\":0.0,\"interval_radius\":0.6895,\"interval_width_normalized\":0.23393,\"observed_mean\":1.0379,\"reference_mean\":0.9662,\"score\":0.0}],\"evidence_note\":\"All evidence derives from received telemetry, declared protected references, and train/calibration fits. True attacked building and clean test values are unavailable.\"}\nSCHEMA:\n{\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"building\",\"channel\",\"assessment\",\"tool_request\",\"justification\"],\"properties\":{\"building\":{\"type\":\"integer\"},\"channel\":{\"type\":\"string\",\"enum\":[\"electricity_pricing\",\"non_shiftable_load\",\"solar_generation\",\"hour\",\"none\"]},\"assessment\":{\"type\":\"string\",\"enum\":[\"corruption_suspected\",\"uncertain\",\"clean\"]},\"tool_request\":{\"type\":\"string\",\"enum\":[\"PEER_SUMMARY\",\"NONE\"]},\"justification\":{\"type\":\"string\"}}}"
+      }
+    ],
+    "format": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "building",
+        "channel",
+        "assessment",
+        "tool_request",
+        "justification"
+      ],
+      "properties": {
+        "building": {
+          "type": "integer"
+        },
+        "channel": {
+          "type": "string",
+          "enum": [
+            "electricity_pricing",
+            "non_shiftable_load",
+            "solar_generation",
+            "hour",
+            "none"
+          ]
+        },
+        "assessment": {
+          "type": "string",
+          "enum": [
+            "corruption_suspected",
+            "uncertain",
+            "clean"
+          ]
+        },
+        "tool_request": {
+          "type": "string",
+          "enum": [
+            "PEER_SUMMARY",
+            "NONE"
+          ]
+        },
+        "justification": {
+          "type": "string"
+        }
+      }
+    },
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 180,
+      "num_ctx": 4096,
+      "num_thread": 6
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-09-18T10:24:16.424100668Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\"building\":4,\"channel\":\"non_shiftable_load\",\"assessment\":\"corruption_suspected\",\"tool_request\":\"NONE\",\"justification\":\"Strong inconsistency with 4.2244 score, 1.0 inconsistent_fraction, and 0.1 alarm_fraction.\"}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 7102109933,
+    "load_duration": 2330764,
+    "prompt_eval_count": 743,
+    "prompt_eval_cached_count": 256,
+    "prompt_eval_duration": 4568357000,
+    "eval_count": 56,
+    "eval_duration": 2492746000
+  },
+  "raw": "{\"building\":4,\"channel\":\"non_shiftable_load\",\"assessment\":\"corruption_suspected\",\"tool_request\":\"NONE\",\"justification\":\"Strong inconsistency with 4.2244 score, 1.0 inconsistent_fraction, and 0.1 alarm_fraction.\"}",
+  "parsed": {
+    "building": 4,
+    "channel": "non_shiftable_load",
+    "assessment": "corruption_suspected",
+    "tool_request": "NONE",
+    "justification": "Strong inconsistency with 4.2244 score, 1.0 inconsistent_fraction, and 0.1 alarm_fraction."
+  },
+  "error": null,
+  "latency_seconds": 7.222173817000112,
+  "input_tokens": 743,
+  "output_tokens": 56
+}

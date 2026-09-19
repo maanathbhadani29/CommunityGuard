@@ -1,0 +1,65 @@
+{
+  "case_id": "original_meter_hack_b3_w1",
+  "trace": [
+    {
+      "node": "detection",
+      "alarm": true
+    },
+    {
+      "node": "forensic_agent",
+      "source": "llama_live",
+      "decision": {
+        "building": 3,
+        "channel": "non_shiftable_load",
+        "assessment": "corruption_suspected",
+        "tool_request": "NONE",
+        "justification": "Strong inconsistency with 98.21% of data, score > 0, and alarm fraction > 0.1."
+      },
+      "error": null
+    },
+    {
+      "node": "defense_agent",
+      "source": "llama_live",
+      "proposal": {
+        "operation": "ENERGY_BALANCE",
+        "justification": "Eligible repair hours, 162 hours changed, 0.1327 improvement, conditional interval dominance."
+      },
+      "error": ""
+    },
+    {
+      "node": "verification",
+      "accepted": true,
+      "changed_hours": 162,
+      "eligible_hours": 162,
+      "mean_guaranteed_absolute_improvement_conditional": 0.13269864358594846,
+      "reason": "conditional_interval_dominance",
+      "scope": "One building/channel only; guarantee requires true channel within the reference interval."
+    },
+    {
+      "node": "commit"
+    }
+  ],
+  "terminal": "committed",
+  "diagnosis": {
+    "building": 3,
+    "channel": "non_shiftable_load",
+    "assessment": "corruption_suspected",
+    "tool_request": "NONE",
+    "justification": "Strong inconsistency with 98.21% of data, score > 0, and alarm fraction > 0.1."
+  },
+  "proposal": {
+    "operation": "ENERGY_BALANCE",
+    "justification": "Eligible repair hours, 162 hours changed, 0.1327 improvement, conditional interval dominance."
+  },
+  "verification": {
+    "accepted": true,
+    "changed_hours": 162,
+    "eligible_hours": 162,
+    "mean_guaranteed_absolute_improvement_conditional": 0.13269864358594846,
+    "reason": "conditional_interval_dominance",
+    "scope": "One building/channel only; guarantee requires true channel within the reference interval."
+  },
+  "attempts": 1,
+  "inspections": 0,
+  "error": ""
+}

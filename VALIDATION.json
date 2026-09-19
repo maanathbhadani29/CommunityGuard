@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "release_scope": "Notebook presentation, instructions, and packaging; scientific implementation unchanged.",
+  "runtime": {
+    "python": "3.13.15",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+  },
+  "execution_method": "IPykernel in-process execute_request",
+  "executed_code_cells": 27,
+  "errors": 0,
+  "graph_tests_passed": 10,
+  "elapsed_seconds_packages_already_installed": 61.17,
+  "all_project_imports_from_fresh_extraction": true,
+  "scientific_sources_unchanged": true,
+  "current_run_checks": {
+    "all_numerical_metrics.csv": {
+      "records": 7808,
+      "unique_keys": true,
+      "outcome_flags_match_measured_errors": true
+    },
+    "all_llama_metrics.csv": {
+      "records": 104,
+      "unique_keys": true,
+      "outcome_flags_match_measured_errors": true
+    },
+    "paired_metrics.csv": {
+      "records": 156,
+      "unique_keys": true,
+      "outcome_flags_match_measured_errors": true
+    },
+    "numerical_summary.csv": "recomputed from this run\u2019s per-case measurements",
+    "paired_summary.csv": "recomputed from this run\u2019s per-case measurements",
+    "figures_and_matched_table": "four saved responses independently scored; 12 matched-policy rows checked",
+    "tokens": "CSV totals agree with authentic call records"
+  },
+  "paper_values": {
+    "CaseN": 1920,
+    "ImproveN": 1613,
+    "HarmN": 11,
+    "UnchangedN": 296,
+    "JointN": 1631,
+    "CleanN": 32,
+    "CleanHarmN": 0,
+    "BeforeE": "0.000285",
+    "AfterE": "0.000059",
+    "ErrorReduction": "79.2",
+    "PairedCaseN": 48,
+    "LlamaImprove": 40,
+    "OneImprove": 40,
+    "PairedRulesImprove": 41,
+    "LlamaHarmN": 0,
+    "OneHarmN": 0,
+    "PairedRulesHarmN": 0
+  },
+  "paper_pages": 8,
+  "all_generated_latex_text_matches_previous_validated_paper": true,
+  "figures_3_to_6_png_identical_to_previous_validated_paper_run": true,
+  "recorded_llama_calls": 165,
+  "recorded_input_tokens": 105857,
+  "recorded_output_tokens": 6243,
+  "default_run_uses_saved_fits_and_archived_responses": true,
+  "fresh_llama_inference_performed": false,
+  "user_supplied_windows_run": "Earlier Python 3.13.5 notebook completed 27 code cells and matched the paper at displayed precision; reviewed, not executed on Windows by the release check.",
+  "notebook_output_edits": "Only readable paths, adjacent stream consolidation, and reference download links; numeric outputs and plot bytes unchanged.",
+  "source_sha256": {
+    "communityguard/final_study.py": "8ef074db9d13702a932ece5d75d3a3f1ee992a7728fb4f6559a2b1e4547c7cb6",
+    "communityguard/update_agents.py": "6c50719f5e66c254e2c27b2622abddaa1ec169686deaa6c89a0b8194a97daf2c",
+    "communityguard/update_experiment.py": "8a1968aa90dc118add0b8bef078f704b3784a828265f0333e61aef052f8444ff",
+    "communityguard/update_graph.py": "70f05e8a7708b06dc5cb9f3d9560264a3dd94f2c558d3da30fc97ff37dde9370",
+    "communityguard/update_method.py": "b7ae35b8187d8d8bb588fae0c430a1a59a09184f43235c0aed0c9768283894de"
+  },
+  "paper_pdf_sha256": "8c684541e0744cfb2b753a7c64f477920485f387432718568f43be1676c6c298",
+  "applies_to": "CommunityGuard_AI_Updated_Tutorial.ipynb",
+  "live_comparison": {
+    "notebook": "CommunityGuard_AI_Live_Comparison.ipynb",
+    "status": "OFFLINE_SOFTWARE_TESTS_PASS",
+    "genuine_live_inference_performed": false,
+    "prefilled_results": false,
+    "offline_checks": {
+      "notebook_all_code_cells_offline": 10,
+      "deliberately_worse_repairs_accepted_and_reported": true,
+      "figures_render_with_abstention": true,
+      "bounded_non_streaming_transport_parameters": true,
+      "unavailable_service_fails_without_replay_fallback": true,
+      "resume_retains_completed_calls": true,
+      "partial_case_set_rejected": true,
+      "mismatched_inputs_rejected": true,
+      "timeout_stops_and_marks_incomplete": true,
+      "failed_case_retry_preserves_failed_logs": true,
+      "full_subset_reference_matches_paper": true,
+      "fresh_numerical_training_from_csv_phase_1": true
+    },
+    "default_scope": "four figure attacks and one clean control",
+    "optional_full_scope": "48 attacks and four clean controls",
+    "default_live_fit_mode": "saved",
+    "optional_live_fit_mode": "refit from the included training/calibration CSV"
+  }
+}

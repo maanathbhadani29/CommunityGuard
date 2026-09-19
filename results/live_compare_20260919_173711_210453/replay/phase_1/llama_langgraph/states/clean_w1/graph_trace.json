@@ -1,0 +1,17 @@
+{
+  "case_id": "clean_w1",
+  "trace": [
+    {
+      "node": "detection",
+      "alarm": false
+    },
+    {
+      "node": "abstain",
+      "reason": "no supported response"
+    }
+  ],
+  "terminal": "abstained",
+  "attempts": 0,
+  "inspections": 0,
+  "error": ""
+}

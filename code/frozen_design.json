@@ -1,0 +1,43 @@
+{
+  "frozen_at_utc": "2026-09-18T10:20:20.005424+00:00",
+  "development": "CityLearn phase_3 all 8064 hours; previous test results reclassified as development",
+  "final_cohorts": [
+    "phase_1",
+    "phase_2"
+  ],
+  "split_hours": [
+    4032,
+    1344,
+    2688
+  ],
+  "numerical_attack_records": 1920,
+  "clean_records": 32,
+  "live_subset": {
+    "weeks": [
+      1,
+      9
+    ],
+    "severities": [
+      "mild",
+      "original",
+      "overreport"
+    ],
+    "building_zero_based": "(1+index_in_selected_weeks+cohort_index+severity_index)%5",
+    "attack_records": 48,
+    "clean_records": 4,
+    "paired_modes": [
+      "llama_one_pass",
+      "llama_langgraph"
+    ]
+  },
+  "illustrations": "phase_1, week 1, original severity, building 3, all four attack classes; first72h displayed, 168h evaluated",
+  "selection_rule": "90% calibration radius selected from .80,.90,.95,.99 by maximum development recovery among configurations with zero harmed development records; physical balance consistency required for load/PV alarm",
+  "changes_after_freeze": "Only reporting, packaging and test-harness corrections permitted; scientific changes require new holdout",
+  "source_sha256": {
+    "communityguard/final_study.py": "8ef074db9d13702a932ece5d75d3a3f1ee992a7728fb4f6559a2b1e4547c7cb6",
+    "communityguard/update_agents.py": "6c50719f5e66c254e2c27b2622abddaa1ec169686deaa6c89a0b8194a97daf2c",
+    "communityguard/update_experiment.py": "8a1968aa90dc118add0b8bef078f704b3784a828265f0333e61aef052f8444ff",
+    "communityguard/update_graph.py": "70f05e8a7708b06dc5cb9f3d9560264a3dd94f2c558d3da30fc97ff37dde9370",
+    "communityguard/update_method.py": "b7ae35b8187d8d8bb588fae0c430a1a59a09184f43235c0aed0c9768283894de"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "source": "deterministic_rules",
+  "stage": "forensics",
+  "parsed": {
+    "building": 3,
+    "channel": "non_shiftable_load",
+    "assessment": "corruption_suspected",
+    "tool_request": "NONE",
+    "justification": "Highest calibrated inconsistency among eligible candidates."
+  },
+  "error": null,
+  "latency_seconds": 0.0,
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,0 +1,65 @@
+{
+  "case_id": "original_inverter_hack_b3_w1",
+  "trace": [
+    {
+      "node": "detection",
+      "alarm": true
+    },
+    {
+      "node": "forensic_agent",
+      "source": "deterministic_rules",
+      "decision": {
+        "building": 3,
+        "channel": "solar_generation",
+        "assessment": "corruption_suspected",
+        "tool_request": "NONE",
+        "justification": "Highest calibrated inconsistency among eligible candidates."
+      },
+      "error": null
+    },
+    {
+      "node": "defense_agent",
+      "source": "deterministic_rules",
+      "proposal": {
+        "operation": "ENERGY_BALANCE",
+        "justification": "Largest positive interval-dominance utility using the same reports given to Llama."
+      },
+      "error": ""
+    },
+    {
+      "node": "verification",
+      "accepted": true,
+      "changed_hours": 79,
+      "eligible_hours": 79,
+      "mean_guaranteed_absolute_improvement_conditional": 1.1189080178519129,
+      "reason": "conditional_interval_dominance",
+      "scope": "One building/channel only; guarantee requires true channel within the reference interval."
+    },
+    {
+      "node": "commit"
+    }
+  ],
+  "terminal": "committed",
+  "diagnosis": {
+    "building": 3,
+    "channel": "solar_generation",
+    "assessment": "corruption_suspected",
+    "tool_request": "NONE",
+    "justification": "Highest calibrated inconsistency among eligible candidates."
+  },
+  "proposal": {
+    "operation": "ENERGY_BALANCE",
+    "justification": "Largest positive interval-dominance utility using the same reports given to Llama."
+  },
+  "verification": {
+    "accepted": true,
+    "changed_hours": 79,
+    "eligible_hours": 79,
+    "mean_guaranteed_absolute_improvement_conditional": 1.1189080178519129,
+    "reason": "conditional_interval_dominance",
+    "scope": "One building/channel only; guarantee requires true channel within the reference interval."
+  },
+  "attempts": 1,
+  "inspections": 0,
+  "error": ""
+}

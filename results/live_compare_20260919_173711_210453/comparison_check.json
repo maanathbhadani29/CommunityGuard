@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "meaning": "Valid matched comparison; outcomes need not agree.",
+  "case_method_pairs": 10,
+  "identical_repair_arrays": 10,
+  "different_repair_arrays": 0,
+  "live_better_than_replay": 0,
+  "live_worse_than_replay": 0,
+  "error_unchanged": 10,
+  "fresh_live_calls": 16,
+  "live_invalid_calls": 0,
+  "no_equality_with_paper_required": true
+}

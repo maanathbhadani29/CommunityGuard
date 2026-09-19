@@ -1,0 +1,65 @@
+{
+  "case_id": "original_inverter_hack_b3_w1",
+  "trace": [
+    {
+      "node": "detection",
+      "alarm": true
+    },
+    {
+      "node": "forensic_agent",
+      "source": "llama_archived_replay",
+      "decision": {
+        "building": 3,
+        "channel": "solar_generation",
+        "assessment": "corruption_suspected",
+        "tool_request": "NONE",
+        "justification": "Strongest inconsistency with score > 0 and inconsistent_fraction >= alarm_fraction."
+      },
+      "error": null
+    },
+    {
+      "node": "defense_agent",
+      "source": "llama_archived_replay",
+      "proposal": {
+        "operation": "ENERGY_BALANCE",
+        "justification": "Largest improvement with 79 changed hours and conditional interval dominance."
+      },
+      "error": ""
+    },
+    {
+      "node": "verification",
+      "accepted": true,
+      "changed_hours": 79,
+      "eligible_hours": 79,
+      "mean_guaranteed_absolute_improvement_conditional": 1.1189080178519129,
+      "reason": "conditional_interval_dominance",
+      "scope": "One building/channel only; guarantee requires true channel within the reference interval."
+    },
+    {
+      "node": "commit"
+    }
+  ],
+  "terminal": "committed",
+  "diagnosis": {
+    "building": 3,
+    "channel": "solar_generation",
+    "assessment": "corruption_suspected",
+    "tool_request": "NONE",
+    "justification": "Strongest inconsistency with score > 0 and inconsistent_fraction >= alarm_fraction."
+  },
+  "proposal": {
+    "operation": "ENERGY_BALANCE",
+    "justification": "Largest improvement with 79 changed hours and conditional interval dominance."
+  },
+  "verification": {
+    "accepted": true,
+    "changed_hours": 79,
+    "eligible_hours": 79,
+    "mean_guaranteed_absolute_improvement_conditional": 1.1189080178519129,
+    "reason": "conditional_interval_dominance",
+    "scope": "One building/channel only; guarantee requires true channel within the reference interval."
+  },
+  "attempts": 1,
+  "inspections": 0,
+  "error": ""
+}

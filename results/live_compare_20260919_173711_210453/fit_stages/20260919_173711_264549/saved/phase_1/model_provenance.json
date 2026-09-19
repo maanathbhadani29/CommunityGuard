@@ -1,0 +1,23 @@
+{
+  "mode": "saved_fits",
+  "refitted": false,
+  "representation": "portable active parameters",
+  "restored_stage": "original training and calibration",
+  "omitted_unused_models": "ExtraTrees validators are never called by protected_balance references",
+  "recomputed_stages": [
+    "attacks",
+    "numerical decisions",
+    "graph execution",
+    "repairs",
+    "evaluation",
+    "plots"
+  ],
+  "source_sha256": {
+    "active_predictors.json": "b954961026fa171501db0a1197cdb14bf8a349d13de929626f0420e598d1e8d8",
+    "calibration.json": "d9d0d268d240a0e5d4cb0ee7b0afd69dda7a63de9ac93c6fd0b938910a9f2929",
+    "feature_aware_ae.pt": "0d711f1fa0c6fc03d8b266f44934904c83fd5b0ce4dacac4975c4a93c1903621",
+    "legacy_ae.pt": "bdea9e8b80b836ac8c53b17f3ae046c32672b1e9d680916bdf831e60842ab154",
+    "legacy_scaler.json": "75c519e110288461e826dd38717051cc2c85914b2c72fd3aa99482658c3d4680",
+    "metric_scale.json": "17a77dc73e00bb4cecdd066152581a25ca80da96f2fff4c9d09a17278e6b830d"
+  }
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "cohort": "phase_1",
+    "case_id": "clean_w1",
+    "attack": null,
+    "severity": "clean",
+    "window": 1,
+    "building": null,
+    "input_sha256": "af21d85251def5e552352c9c8f12dc4e058229f0af2aac7f80587866a18cc2e3"
+  },
+  {
+    "cohort": "phase_1",
+    "case_id": "original_market_hack_b3_w1",
+    "attack": "market_hack",
+    "severity": "original",
+    "window": 1,
+    "building": 2,
+    "input_sha256": "ced95d9361c0efa1ffff9ed2b44c1a0ae811aae17df62a144f892558c9d8033e"
+  },
+  {
+    "cohort": "phase_1",
+    "case_id": "original_meter_hack_b3_w1",
+    "attack": "meter_hack",
+    "severity": "original",
+    "window": 1,
+    "building": 2,
+    "input_sha256": "26301d60e22c96fd02f20ca38af373e4e571c0c8c2c5ca24cdafca4d52352e21"
+  },
+  {
+    "cohort": "phase_1",
+    "case_id": "original_inverter_hack_b3_w1",
+    "attack": "inverter_hack",
+    "severity": "original",
+    "window": 1,
+    "building": 2,
+    "input_sha256": "86d1b989248eafa3b657450a3d79a2423c8d01537415f85a579f666f47cab0cb"
+  },
+  {
+    "cohort": "phase_1",
+    "case_id": "original_time_spoofing_b3_w1",
+    "attack": "time_spoofing",
+    "severity": "original",
+    "window": 1,
+    "building": 2,
+    "input_sha256": "eaff5a2fe554185d1ff04ac2868da757af951ed11b7748c37e7bb0c926ee1586"
+  }
+]

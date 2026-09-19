@@ -1,0 +1,11 @@
+cohort,case_id,method,attack,same_target,same_operation,same_terminal,same_repair_array_exact,different_entries_above_1e_minus7,error_replay,error_live,error_delta_live_minus_replay,target_rmse_replay,target_rmse_live,collateral_error_replay,collateral_error_live,input_tokens_replay,input_tokens_live,output_tokens_replay,output_tokens_live,historical_model_seconds,fresh_model_seconds
+phase_1,clean_w1,llama_langgraph,,True,True,True,True,0,0.0,0.0,0.0,,,0.0,0.0,0,0,0,0,0.0,0.0
+phase_1,clean_w1,llama_one_pass,,True,True,True,True,0,0.0,0.0,0.0,,,0.0,0.0,0,0,0,0,0.0,0.0
+phase_1,original_inverter_hack_b3_w1,llama_langgraph,inverter_hack,True,True,True,True,0,2.7156321693220458e-08,2.7156321693220458e-08,0.0,0.004605269298997961,0.004605269298997961,0.0,0.0,1323,1323,71,71,6.736813299000005,0.6126691999961622
+phase_1,original_inverter_hack_b3_w1,llama_one_pass,inverter_hack,True,True,True,True,0,2.7156321693220458e-08,2.7156321693220458e-08,0.0,0.004605269298997961,0.004605269298997961,0.0,0.0,1323,1323,72,71,14.115699494000182,0.6927028999198228
+phase_1,original_market_hack_b3_w1,llama_langgraph,market_hack,True,True,True,True,0,2.894488148687785e-10,2.894488148687785e-10,0.0,0.00010870353884437605,0.00010870353884437605,0.0,0.0,1258,1260,92,82,8.05103119200021,0.6908321999944746
+phase_1,original_market_hack_b3_w1,llama_one_pass,market_hack,True,True,True,True,0,2.894488148687785e-10,2.894488148687785e-10,0.0,0.00010870353884437605,0.00010870353884437605,0.0,0.0,1260,1258,87,77,11.263147724000191,3.6332130000228062
+phase_1,original_meter_hack_b3_w1,llama_langgraph,meter_hack,True,True,True,True,0,7.563349175090246e-08,7.563349175090246e-08,0.0,0.008608255815614833,0.008608255815614833,0.0,0.0,1333,1338,84,95,9.868289131999973,0.7977637999574654
+phase_1,original_meter_hack_b3_w1,llama_one_pass,meter_hack,True,True,True,True,0,7.563349175090246e-08,7.563349175090246e-08,0.0,0.008608255815614833,0.008608255815614833,0.0,0.0,1329,1338,69,91,11.983515697000257,0.825356799934525
+phase_1,original_time_spoofing_b3_w1,llama_langgraph,time_spoofing,True,True,True,True,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1250,1250,78,78,5.922012589000133,0.65764680004213
+phase_1,original_time_spoofing_b3_w1,llama_one_pass,time_spoofing,True,True,True,True,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1250,1250,78,78,11.59373879299983,0.7415811000391841
